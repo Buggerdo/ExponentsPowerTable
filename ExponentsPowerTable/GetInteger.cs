@@ -12,6 +12,7 @@ namespace ExponentsPowerTable
             do
             {
                 Clear();
+                WriteLine("Welcome to the Exponents Power Table Generator.");
                 Write("Please enter an integer :");
                 string input = Console.ReadLine();
                 try
