@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using static ExponentsPowerTable.ExponentsTable;
+using static ExponentsPowerTable.GetInteger;
 
 namespace ExponentsPowerTable
 {
@@ -10,8 +7,8 @@ namespace ExponentsPowerTable
     {
         public Exponents()
         {
-            int input = GetInteger.GetInt();
-            ExponentsTable.Table(input);
+            int input = GetInt();
+            Table(input);
         }
     }
 }

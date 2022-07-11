@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using static System.Console;
 
 namespace ExponentsPowerTable
 {
@@ -15,12 +11,13 @@ namespace ExponentsPowerTable
             string cubed = "Cubed";
             string dashes = "=======";
             const int space = -10;
-            Console.WriteLine(String.Format($"{number, space}{squared, space}{cubed, space}"));
-            Console.WriteLine(String.Format($"{dashes, space}{dashes, space}{dashes, space}"));
+
+            WriteLine(String.Format($"{number, space}{squared, space}{cubed, space}"));
+            WriteLine(String.Format($"{dashes, space}{dashes, space}{dashes, space}"));
 
             for(int i = 1; i <= input; i++)
             {
-                Console.WriteLine(string.Format($"{i, space}{Math.Pow(i, 2), space}{Math.Pow(i, 3), space}"));
+                WriteLine(string.Format($"{i, space}{Math.Pow(i, 2), space}{Math.Pow(i, 3), space}"));
             }
         }
     }

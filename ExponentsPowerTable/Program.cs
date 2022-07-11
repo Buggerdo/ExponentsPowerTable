@@ -1,4 +1,6 @@
-﻿namespace ExponentsPowerTable
+﻿using static ExponentsPowerTable.Continue;
+
+namespace ExponentsPowerTable
 {
     internal class Program
     {
@@ -7,7 +9,7 @@
             do
             {
                 _ = new Exponents();
-            } while(Continue.IsContinue());
+            } while(IsContinue());
         }
     }
 }

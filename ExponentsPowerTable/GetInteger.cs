@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using static System.Console;
+
 
 namespace ExponentsPowerTable
 {
@@ -14,8 +11,8 @@ namespace ExponentsPowerTable
             bool isGoodNumber;
             do
             {
-                Console.Clear();
-                Console.Write("Please enter an integer :");
+                Clear();
+                Write("Please enter an integer :");
                 string input = Console.ReadLine();
                 try
                 {
@@ -26,24 +23,24 @@ namespace ExponentsPowerTable
                     }
                     else
                     {
-                        Console.WriteLine("The number must be positive.");
+                        WriteLine("The number must be positive.");
                         isGoodNumber = false;
                     }
                 }
                 catch(FormatException)
                 {
-                    Console.WriteLine("Sorry that is not a valid input.");
+                    WriteLine("Sorry that is not a valid input.");
                     isGoodNumber = false;
                 }
                 catch(OverflowException)
                 {
-                    Console.WriteLine("Sorry that number is too big.");
+                    WriteLine("Sorry that number is too big.");
                     isGoodNumber = false;
                 }
                 if(!isGoodNumber)
                 {
-                    Console.WriteLine("Press any key to continue.");
-                    Console.ReadLine();
+                    WriteLine("Press any key to continue.");
+                    ReadLine();
                 }
             } while(!isGoodNumber);
             return number;

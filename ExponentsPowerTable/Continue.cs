@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace ExponentsPowerTable
 {
     internal class Continue
     {
         public static bool IsContinue()
         {
-            Console.Write("Continue Y/N? ");
-            string input = Console.ReadLine();
-            return true;
+            string[] yes = new[] { "y" , "yes", "yup" };
+            string[] no = new[] { "n" , "no" , "nope" };
+            do
+            {
+                Console.Write("\nContinue Y/N? ");
+                string input = Console.ReadLine().ToLower().Trim();
+                if(yes.Contains(input)) return true;
+                if(no.Contains(input)) return false; 
+            } while(true);          
         }
     }
 }
